@@ -1,0 +1,94 @@
+{
+    const helloWorld = () => {
+        console.log("Witam na zapleczu 😄!");
+    };
+
+    const tasks = [
+        {
+            content: "zrobić listę zadań",
+            done: true,
+        },
+        {
+            content: "otrzymać feedback",
+            done: false,
+        },
+    ];
+
+    const addNewTask = (newTaskContent) => {
+        tasks.push({
+            content: newTaskContent,
+            done: false,
+        });
+        render();
+    };
+
+    const clearForm = () => {
+        const newTaskContent = document.querySelector(".js-input");
+        newTaskContent.value = "";
+        newTaskContent.focus();
+    }
+
+    const doneTask = (taskIndex) => {
+        tasks[taskIndex].done = !tasks[taskIndex].done;
+        render();
+    };
+
+    const removeTask = (taskIndex) => {
+        tasks.splice(taskIndex, 1);
+        render();
+    };
+
+    const render = () => {
+        let htmlString = "";
+
+        for (const task of tasks) {
+            htmlString += `
+    <div class="form__div">
+    <button class="button__done js-doneButton">${task.done ? "✔" : ""}</button>
+    <article class = " ${task.done ? " form__taskDone " : " form__taskUndDone"}  form__task">
+    ${task.content}
+    </article>
+    <button class="button__remove js-removeButton">🗑</button>
+    </div>
+    `;
+        }
+        document.querySelector(".js-taskList").innerHTML = htmlString;
+
+        const doneButtons = document.querySelectorAll(".js-doneButton");
+
+        doneButtons.forEach((doneButton, taskIndex) => {
+            doneButton.addEventListener("click", () => {
+                doneTask(taskIndex);
+            });
+        });
+
+        const removeButtons = document.querySelectorAll(".js-removeButton");
+
+        removeButtons.forEach((removeButton, taskIndex) => {
+            removeButton.addEventListener("click", () => {
+                removeTask(taskIndex);
+            });
+        });
+    };
+
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+        const newTaskContent = document.querySelector(".js-input").value.trim();
+
+        if (newTaskContent === "") {
+            return;
+        }
+
+        addNewTask(newTaskContent);
+        clearForm();
+    };
+
+    const init = () => {
+        helloWorld();
+        render();
+        const form = document.querySelector(".js-form");
+        form.addEventListener("submit", onFormSubmit);
+    };
+
+    init();
+}

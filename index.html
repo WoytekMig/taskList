@@ -13,11 +13,34 @@
     <link href="css/button.css" rel="stylesheet">
     <script defer src="js/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> XXXXXXXXXXXXXXXXXX
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="images/icon.ico"> XXXXXXXXXXXXXXXXXX
-    <meta property="og:image" content="images/XXXXXXXXXXXXXXXXXXX.jpg"> XXXXXXXXXXXXXXXXXX
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icon.jpg">
+    <meta property="og:image" content="images/taskListImage.jpg">
 
-    <title>A simple task list</title>
+    <title>Lista zadań</title>
 </head>
+
+<body class="main">
+    <form class="js-form">
+        <section class="form__container form__container--header">
+            <h1>Lista zadań</h1>
+        </section>
+        <section class="form__container">
+            <h2>Dodaj nowe zadanie</h2>
+        </section>
+        <section class="form__container form__container--input">
+            <input type="text" name="nameTheTask" class="form__input js-input" placeholder="Co jest do zrobienia?"
+                autofocus>
+            <button class="form__button js-button">Dodaj zadanie</button>
+    </form>
+    </section>
+    <section class="form__container">
+        <h2>Lista zadań</h2>
+    </section>
+    <section class="form__container ">
+        <ul class="form__list js-taskList"></ul>
+    </section>
+</body>
+
+</html>

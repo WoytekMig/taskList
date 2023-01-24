@@ -1,0 +1,15 @@
+html {
+    box-sizing: border-box;
+    line-height: 1.15;
+}
+
+*,
+::after, ::before {
+    box-sizing: inherit;
+}
+
+.main {
+    background-color: #ededed;
+    font-family: 'Lato', sans-serif;
+   margin: auto;
+}

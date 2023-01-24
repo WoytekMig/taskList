@@ -1,0 +1,14 @@
+.button__done {
+    border: 0;
+    width: 25px;
+    height: 25px;
+    background-color: #007d20;
+    color: white
+}
+
+.button__remove {
+    border: 0;
+    width: 25px;
+    height: 25px;
+    background-color: #f4013c;
+}
