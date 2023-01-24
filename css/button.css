@@ -6,9 +6,18 @@
     color: white
 }
 
+.button__done:hover {
+    border: 2px solid;
+    background-color: #059027;
+}
+
 .button__remove {
     border: 0;
     width: 25px;
     height: 25px;
     background-color: #f4013c;
+}
+
+.button__remove:hover {
+    background-color: #f2416d;
 }

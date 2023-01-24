@@ -28,7 +28,7 @@
         newTaskContent.focus();
     }
 
-    const doneTask = (taskIndex) => {
+    const toggleDoneTask = (taskIndex) => {
         tasks[taskIndex].done = !tasks[taskIndex].done;
         render();
     };
@@ -43,14 +43,14 @@
 
         for (const task of tasks) {
             htmlString += `
-    <div class="form__div">
-    <button class="button__done js-doneButton">${task.done ? "✔" : ""}</button>
-    <article class = " ${task.done ? " form__taskDone " : " form__taskUndDone"}  form__task">
-    ${task.content}
-    </article>
-    <button class="button__remove js-removeButton">🗑</button>
-    </div>
-    `;
+                <li class="form__element">
+                     <button class="button__done js-doneButton">${task.done ? "✔" : ""}</button>
+                     <article class = " ${task.done ? " form__taskDone " : ""}  form__task">
+                     ${task.content}
+                    </article>
+                    <button class="button__remove js-removeButton">🗑</button>
+                </li>
+             `;
         }
         document.querySelector(".js-taskList").innerHTML = htmlString;
 
@@ -58,7 +58,7 @@
 
         doneButtons.forEach((doneButton, taskIndex) => {
             doneButton.addEventListener("click", () => {
-                doneTask(taskIndex);
+                toggleDoneTask(taskIndex);
             });
         });
 

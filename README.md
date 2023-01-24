@@ -12,7 +12,7 @@ It is another exercise task during YouCode programmig course  :) Here's a little
 
 ![show](images/taskListShow.gif)
 
-The task was to make... task list :) Major events are taking place in script.js. I've learned many new useful elements, such as creating tables or adding (and removing) elements to the html code through the input. Fell free to check me ;) 
+The task was to make... task list :) Major events are taking place in script.js. I've learned many new useful elements, such as creating tables or adding (and removing) elements to the html code through the input. Fell free to test me ;) 
 
 
 
