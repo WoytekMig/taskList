@@ -3,7 +3,7 @@
 Here's my yet another scope of work [**A simple task list** - feel free to check it out :)](https://woytekmig.github.io/taskList/)
 
 This time, I was incresing skills mostly in:  
-- [x] **JS** (ES6)
+- [x] **JS** (ES6)  
 And also using BEM convention in :
 - [x] **HTML** 
 - [x] **CSS**  
