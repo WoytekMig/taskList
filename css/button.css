@@ -1,23 +1,31 @@
+.button {
+    border: none;
+    width: 30px;
+    height: 30px;
+    color: white;
+    padding: 0;
+}
+
 .button__done {
-    border: 0;
-    width: 25px;
-    height: 25px;
-    background-color: #007d20;
-    color: white
+    background-color: hsl(120, 60%, 35%);
 }
 
 .button__done:hover {
-    border: 2px solid;
-    background-color: #059027;
+    background-color: hsl(135, 60%, 40%);
+}
+
+.button__done:active {
+    background-color: hsl(135, 60%, 45%);
 }
 
 .button__remove {
-    border: 0;
-    width: 25px;
-    height: 25px;
-    background-color: #f4013c;
+    background-color: hsl(348, 83%, 47%);
 }
 
 .button__remove:hover {
-    background-color: #f2416d;
+    background-color: hsl(348, 83%, 52%);
+}
+
+.button__remove:active {
+    background-color: hsl(348, 83%, 57%);
 }

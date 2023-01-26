@@ -23,9 +23,10 @@
     };
 
     const clearForm = () => {
-        const newTaskContent = document.querySelector(".js-input");
-        newTaskContent.value = "";
-        newTaskContent.focus();
+        const newTaskElement = document.querySelector(".js-input");
+
+        newTaskElement.value = "";
+        newTaskElement.focus();
     }
 
     const toggleDoneTask = (taskIndex) => {
@@ -38,22 +39,7 @@
         render();
     };
 
-    const render = () => {
-        let htmlString = "";
-
-        for (const task of tasks) {
-            htmlString += `
-                <li class="form__element">
-                     <button class="button__done js-doneButton">${task.done ? "✔" : ""}</button>
-                     <article class = " ${task.done ? " form__taskDone " : ""}  form__task">
-                     ${task.content}
-                    </article>
-                    <button class="button__remove js-removeButton">🗑</button>
-                </li>
-             `;
-        }
-        document.querySelector(".js-taskList").innerHTML = htmlString;
-
+    const bindEvents = () => {
         const doneButtons = document.querySelectorAll(".js-doneButton");
 
         doneButtons.forEach((doneButton, taskIndex) => {
@@ -69,10 +55,32 @@
                 removeTask(taskIndex);
             });
         });
+    }
+
+
+    const render = () => {
+        let htmlString = "";
+
+        for (const task of tasks) {
+
+            htmlString += `
+                <li class="form__element">
+                     <button class="button button__done js-doneButton">${task.done ? "✔" : ""}</button>
+                     <article class = " ${task.done ? " form__taskDone " : ""}  form__task">
+                     ${task.content}
+                    </article>
+                    <button class="button button__remove js-removeButton">🗑</button>
+                </li>
+             `;
+        }
+        document.querySelector(".js-taskList").innerHTML = htmlString;
+
+        bindEvents();
     };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+
         const newTaskContent = document.querySelector(".js-input").value.trim();
 
         if (newTaskContent === "") {

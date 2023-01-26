@@ -21,26 +21,33 @@
     <title>Lista zadań</title>
 </head>
 
-<body class="main">
-    <form class="js-form">
-        <section class="form__container form__container--header">
+<body>
+    <main class="main">
+
+        <header>
             <h1>Lista zadań</h1>
+        </header>
+
+        <section class="form__section">
+            <h2 class="form__header">Dodaj nowe zadanie</h2>
+
+            <!-- <section class="form__container form__container--input"> -->
+            <div class="form__container">
+                <form class="form js-form">
+                    <input type="text" name="nameTheTask" class="form__input js-input"
+                        placeholder="Co jest do zrobienia?" autofocus>
+                    <button class="form__button js-button">Dodaj zadanie</button>
+            </div>
         </section>
-        <section class="form__container">
-            <h2>Dodaj nowe zadanie</h2>
+        </form>
+        <section class="form__section">
+            <h2 class="form__header">Lista zadań</h2>
+
+            <div class="form__container ">
+                <ul class="form__list js-taskList"></ul>
+            </div>
         </section>
-        <section class="form__container form__container--input">
-            <input type="text" name="nameTheTask" class="form__input js-input" placeholder="Co jest do zrobienia?"
-                autofocus>
-            <button class="form__button js-button">Dodaj zadanie</button>
-        </section>
-    </form>
-    <section class="form__container">
-        <h2>Lista zadań</h2>
-    </section>
-    <section class="form__container ">
-        <ul class="form__list js-taskList"></ul>
-    </section>
+    </main>
 </body>
 
 </html>
