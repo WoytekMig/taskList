@@ -10,9 +10,9 @@ And also using BEM convention in :
 
 It is another exercise task during YouCode programmig course  :) Here's a little demo : 
 
-![show](images/taskListShow.gif)
+![show](images/taskListShow2.gif)
 
-The task was to make... task list :) Major events are taking place in script.js. I've learned many new useful elements, such as creating tables or adding (and removing) elements to the html code through the input. Fell free to test me ;) 
+The task was to make... task list :) Major events are taking place in script.js. I've learned many new useful elements, such as creating tables or adding (and removing) elements to the html code through the input. Another step was to use immutability and also to add buttons: marking every task 'done' and hiding 'done' tasks. Fell free to test me ;) 
 
 
 
