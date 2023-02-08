@@ -11,6 +11,7 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
     <link href="css/button.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
     <script defer src="js/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +29,7 @@
             <h1>Lista zadań</h1>
         </header>
 
-        <section class="form__section">
+        <section class="main__section">
             <h2 class="form__header">Dodaj nowe zadanie</h2>
 
             <!-- <section class="form__container form__container--input"> -->
@@ -40,8 +41,11 @@
             </div>
         </section>
         </form>
-        <section class="form__section">
-            <h2 class="form__header">Lista zadań</h2>
+        <section class="main__section">
+            <div class="section section__header"> 
+                <h2 class="section__secondHeader">Lista zadań</h2>
+                <div class="section section__subDiv js-buttonsDiv"></div>           
+            </div>
 
             <div class="form__container ">
                 <ul class="form__list js-taskList"></ul>

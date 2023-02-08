@@ -1,0 +1,49 @@
+.section {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .section {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section__header {
+    padding: 20px;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.section__secondHeader {
+    padding: 0;
+    margin: 0;
+}
+
+.section__subDiv {
+    color: hsl(180, 100%, 25%);
+    text-decoration: dotted;
+} 
+
+.section__button {
+    margin: auto;
+    background: transparent;
+    border: none;
+    color: hsl(180, 100%, 25%);
+}
+
+.section__button:hover {
+    color: hsl(180, 100%, 35%);
+    transition: 0.3s;
+}
+
+.section__button:disabled {
+    color: #ccc;
+}
+
+.section__hide {
+    display: none;
+}

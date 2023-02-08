@@ -12,6 +12,7 @@
 
 .button__done:hover {
     background-color: hsl(135, 60%, 40%);
+    transition: 0.3s;
 }
 
 .button__done:active {
@@ -24,6 +25,7 @@
 
 .button__remove:hover {
     background-color: hsl(348, 83%, 52%);
+    transition: 0.3s;
 }
 
 .button__remove:active {
