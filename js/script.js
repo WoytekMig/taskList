@@ -87,14 +87,14 @@
         };
         const toggleHideDoneElements = document.querySelector(".js-toggleShowing");
         if (toggleHideDoneElements) {
-        toggleHideDoneElements.addEventListener("click", () => {
-            toggleHideDone();
-        });
+            toggleHideDoneElements.addEventListener("click", () => {
+                toggleHideDone();
+            });
+        };
     };
-    };
+
     const renderTasks = () => {
         let htmlString = "";
-
         for (const task of tasks) {
             htmlString += `
             <li class="form__element ${task.done && hideDoneTask ? "section__hide" : ""}">
@@ -103,8 +103,7 @@
                  ${task.content}
                 </article>
                 <button class="button button__remove js-removeButton">🗑</button>
-            </li>
-         `;
+            </li> `;
         }
         document.querySelector(".js-taskList").innerHTML = htmlString;
     };
@@ -119,8 +118,6 @@
         document.querySelector(".js-buttonsDiv").innerHTML = htmlButtons;
     };
 
-    /*  ${tasks.every({done}) ? "disabled" : ""} */
-
     const render = () => {
         renderTasks();
         renderButtons();
@@ -132,11 +129,9 @@
         event.preventDefault();
 
         const newTaskContent = document.querySelector(".js-input").value.trim();
-
         if (newTaskContent === "") {
             return;
         }
-
         addNewTask(newTaskContent);
         clearForm();
     };
