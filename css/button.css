@@ -8,11 +8,12 @@
 
 .button__done {
     background-color: hsl(120, 60%, 35%);
+    transition: 0.6s;
 }
 
 .button__done:hover {
     background-color: hsl(135, 60%, 40%);
-    transition: 0.3s;
+    cursor: pointer;
 }
 
 .button__done:active {
@@ -21,11 +22,12 @@
 
 .button__remove {
     background-color: hsl(348, 83%, 47%);
+    transition: 0.6s;
 }
 
 .button__remove:hover {
     background-color: hsl(348, 83%, 52%);
-    transition: 0.3s;
+    cursor: pointer;
 }
 
 .button__remove:active {

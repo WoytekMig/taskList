@@ -26,18 +26,19 @@
 .section__subDiv {
     color: hsl(180, 100%, 25%);
     text-decoration: dotted;
-} 
+}
 
 .section__button {
     margin: auto;
     background: transparent;
     border: none;
     color: hsl(180, 100%, 25%);
+    transition: 0.7s;
 }
 
 .section__button:hover {
     color: hsl(180, 100%, 35%);
-    transition: 0.3s;
+    cursor: pointer;
 }
 
 .section__button:disabled {
